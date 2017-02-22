@@ -4,7 +4,7 @@ import Button from './Button';
 
 class ReservationList extends Component {
   render() {
-                      var t=  this.props.times;
+    var t =  this.props.times;
 
     return (
       <div>
@@ -12,10 +12,10 @@ class ReservationList extends Component {
         <h3>Reservations</h3>
         <p>Filter By Time</p>
         <select>
-          {t.map((result) => (
-              <option value={result}>{result}</option>
+          {t.map((result,index) => (
+              <option key={index} value={result}>{result}</option>
           ))}
-        </select>       
+        </select>
         <table>
           <tbody>
           <tr>

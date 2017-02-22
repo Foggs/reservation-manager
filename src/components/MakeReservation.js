@@ -18,19 +18,19 @@ class MakeReservation extends Component{
         },
       };
     }
-    
+
     componentDidMount () {
         console.log('componentDidMount')
-         
+
     }
-    
+
     onChange(event) {
         this.state.form[event.target.name] = event.target.value;
         this.setState({form: this.state.form});
         console.log('Form change >> ' + this.state.form.name);
-        
+
     }
-    
+
     onSubmit(event) {
         event.preventDefault();
         console.log('Form submitted >> ' + this.states);
@@ -45,7 +45,7 @@ class MakeReservation extends Component{
           <fieldset>
             <legend>Reservation<i className="glyphicon glyphicon-cutlery"></i></legend>
             <div className="form-group">
-              <label className="col-md-4 control-label">Name</label>  
+              <label className="col-md-4 control-label">Name</label>
               <div className="col-md-4 inputGroupContainer">
                 <div className="input-group">
                   <span className="input-group-addon"><i className="glyphicon glyphicon-user"></i></span>
@@ -56,7 +56,7 @@ class MakeReservation extends Component{
             </div>
 
             <div className="form-group">
-              <label className="col-md-4 control-label">Phone Number</label>  
+              <label className="col-md-4 control-label">Phone Number</label>
                 <div className="col-md-4 inputGroupContainer">
                 <div className="input-group">
                   <span className="input-group-addon"><i className="glyphicon glyphicon-earphone"></i></span>
@@ -77,7 +77,7 @@ class MakeReservation extends Component{
               </div>
             </div>
 
-            <div className="form-group"> 
+            <div className="form-group">
               <label className="col-md-4 control-label">Time</label>
                 <div className="col-md-4 selectContainer">
                 <div className="input-group">
@@ -85,8 +85,8 @@ class MakeReservation extends Component{
                 <select value={this.state.form.time}
                     onChange={this.onChange.bind(this)} name="state" className="form-control selectpicker" >
                   <option value=" " >Please select your time</option>
-                  {t.map((result) => (
-                      <option value={result}>{result}</option>
+                  {t.map((result,index) => (
+                      <option key={index} value={result}>{result}</option>
                   ))}
                 </select>
               </div>
@@ -94,7 +94,7 @@ class MakeReservation extends Component{
             </div>
 
             <div className="form-group">
-              <label className="col-md-4 control-label">E-Mail</label>  
+              <label className="col-md-4 control-label">E-Mail</label>
                 <div className="col-md-4 inputGroupContainer">
                 <div className="input-group">
                   <span className="input-group-addon"><i className="glyphicon glyphicon-envelope"></i></span>
@@ -124,10 +124,10 @@ class MakeReservation extends Component{
             </div>
           </fieldset>
           </form>
-        </div>     
+        </div>
       );
     }
-}; 
+};
 export default MakeReservation;
 
 MakeReservation.defaultProps = {

@@ -52,10 +52,10 @@ class FloorPlan extends Component {
   				  <li className="flex-item">53</li>
   				  <li className="flex-item">54</li>
   				  <li className="flex-item">55</li>
-  				</ul>	
-	    	</div>      		
+  				</ul>
+	    	</div>
 		</div>
-        
+
     );
   }
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navigation from './components/Navigation';
 import Button from './components/Button';
@@ -34,7 +33,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // http://codepen.io/jobs.json
     console.log('componentDidMount')
     var self = this;
     axios.get('/MOCK_DATA.json')
@@ -66,10 +64,9 @@ class App extends Component {
     return (
       <div key='main' className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to the Hideaway Reservation Manager</h2>
         </div>
-        
+
         <Navigation label={"Home"} handleClick={this.handleClick}/>
 
         <Button label={"Make Reservation"} handleClick={this.handleClick}/>
